@@ -1,0 +1,18 @@
+<section>
+  <div class="grid-container">
+    <ng-container *ngFor="let book of bookService?.books; let i = index">
+      <div class="grid-item" [routerLink]="'/details/' + i">
+        <h3>{{ book?.name }}</h3>
+        <img
+          width="200"
+          height="200"
+          [src]="book?.imageUrl"
+          [alt]="book?.name"
+        />
+        <div class="">
+          <button mat-raised-button>Add to cart</button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>
